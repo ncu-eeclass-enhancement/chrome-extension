@@ -1,8 +1,10 @@
 <template>
-    <div class="w-auto h-auto max-w-[80%] bg-gray-700 rounded-lg mr-[20%]">
-        <p class="message-text mx-[5%] w-auto">{{ text }}</p>
+  <div class = "h-auto w-full flex justify-start flex-row">
+    <div class="h-auto w-fit bg-gray-700 rounded-lg p-[2%] max-w-[80%]">
+      <p class="message-text mx-[5%]">{{ text }}</p>
     </div>
-  </template>
+  </div>
+</template>
   
 <script setup>
   defineProps({
@@ -15,10 +17,10 @@
 
 <style scoped>
     .message-text {
-    font-size: 14px; /* Adjust font size if necessary */
-    margin: 0; /* Remove extra margins */
-    word-wrap: break-word; /* Ensure long words wrap */
-    overflow-wrap: break-word; /* Modern equivalent for word wrapping */
-    white-space: normal; /* Allow text to wrap */
+    font-size: 14px; 
+    margin: 0; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    white-space: normal; 
     }
 </style>

@@ -8,11 +8,18 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import Chat from './views/Chat.vue';
 import NotLoggedIn from './views/NotLoggedIn.vue';
 
-const loggedIn = true; 
-console.log(loggedIn);
+const loggedIn = ref(true); 
+
+// chrome.cookies.get({ name: "account", url: "https://ncueeclass.ncu.edu.tw" }, (cookie) => {
+//   if (cookie && cookie.value) {
+//     loggedIn.value = true; 
+//   }
+// });
+
 </script>
 
 <style scoped>
