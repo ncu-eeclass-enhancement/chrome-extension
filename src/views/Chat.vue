@@ -28,7 +28,7 @@
   
   const userMessage = ref(''); // Holds the current text the user is typing
   const messages = ref([ // Initial messages (system message)
-    { text: 'Hello! How can I help you today?', sender: 'system' },
+    { text: '嗨! 我是E起學，請問需要什麼幫助呢?', sender: 'system' },
   ]);
   
   // Function to send the message

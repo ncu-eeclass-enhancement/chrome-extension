@@ -6,7 +6,6 @@
 
 <script setup>
 
-console.log("not loggend in");
 </script>
 
 <style scoped>

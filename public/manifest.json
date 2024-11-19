@@ -9,14 +9,13 @@
     },
     "permissions": [
       "cookies",
-      "tabs",
-      "http://*/",
-      "https://*/"
+      "tabs"
     ],
     "background": {
       "service_worker": "background.js"
     },
     "host_permissions": [
+      "*://*.ncueeclass.ncu.edu.tw/",
       "http://*/*",
       "https://*/*"
     ]
