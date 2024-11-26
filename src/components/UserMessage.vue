@@ -17,8 +17,8 @@
   
   <style scoped>
   .message-text {
-    font-size: 14px; /* Adjust font size if necessary */
-    margin: 0; /* Remove extra margins */
+    font-size: 14px; 
+    margin: 0; 
     word-wrap: break-word; /* Ensure long words wrap */
     overflow-wrap: break-word; /* Modern equivalent for word wrapping */
     white-space: normal; /* Allow text to wrap */

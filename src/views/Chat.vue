@@ -1,7 +1,7 @@
 <template>
     <div class="h-[100%] w-[100%] flex flex-col">
       <!-- Message List -->
-      <div class="w-full h-[80%] flex flex-col overflow-auto p-4">
+      <div id="messageList" class="w-full h-[80%] flex flex-col overflow-auto p-4">
         <div v-for="(message, index) in messages" :key="index" class="flex flex-col mb-2">
             <UserMessage v-if="message.sender === 'user'" :text="message.text" />
             <SystemMessage v-else :text="message.text" />
@@ -25,37 +25,36 @@
   import UserMessage from '../components/UserMessage.vue';
   import SystemMessage from '../components/SystemMessage.vue';
   import { ref } from 'vue';
+  import { nextTick } from 'vue';
   
-  const userMessage = ref(''); // Holds the current text the user is typing
-  const messages = ref([ // Initial messages (system message)
+  const userMessage = ref(''); 
+  const messages = ref([ 
     { text: '嗨! 我是E起學，請問需要什麼幫助呢?', sender: 'system' },
   ]);
   
-  // Function to send the message
+  // function to send the message
   const sendMessage = () => {
     if (userMessage.value.trim()) {
-      // Add the user's message to the list
+      // add the user's message to the list
       messages.value.push({ text: userMessage.value, sender: 'user' });
-      userMessage.value = ''; // Clear the input box
-      scrollToBottom(); // Scroll to the bottom after a new message
-  
-      setTimeout(() => {
-        messages.value.push({
-          text: 'Thank you for your message!',
-          sender: 'system',
-        });
-        scrollToBottom();
-      }, 1000);
+      userMessage.value = ''; 
+      scrollToBottom(); 
     }
   };
   
-  // Scroll to the bottom of the messages container
   const scrollToBottom = () => {
-    const messageList = document.querySelector('.w-full.h-[80%]');
-    messageList.scrollTop = messageList.scrollHeight;
+    nextTick(() => {
+      const messageList = document.getElementById('messageList');
+      if (messageList) {
+        messageList.scrollTop = messageList.scrollHeight;
+      }
+    });
   };
   </script>
 
-  <style scoped>
-  </style>
+<style scoped>
+#messageList {
+  scroll-behavior: smooth;
+}
+</style>
   
