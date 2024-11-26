@@ -9,14 +9,20 @@
       </div>
   
       <!-- Input Box -->
-      <div class="w-full h-[20%] flex justify-center items-center p-2">
-        <input
+      <div class="w-full h-[20%] flex justify-center items-center border rounded-lg bg-gray-700">
+        <textarea
           v-model="userMessage"
-          @keyup.enter="sendMessage"
           type="text"
-          class="w-full h-[100%] px-4 py-2 border rounded-lg bg-gray-700"
-          placeholder="Type a message..."
-        />
+          class="w-full h-[100%] px-4 py-2 bg-gray-700 rounded-tl-lg rounded-bl-lg"
+          placeholder="想問什麼呢?"
+        ></textarea>
+        <button
+          @click="sendMessage"
+          class="h-full px-4 py-2 bg-gray-500 text-white font-bold hover:bg-gray-600 rounded-tr-lg rounded-br-lg"
+        >
+          <!-- Send Icon -->
+          <font-awesome-icon :icon="['fas', 'paper-plane']"/>
+      </button>
       </div>
     </div>
   </template>
@@ -24,6 +30,7 @@
   <script setup>
   import UserMessage from '../components/UserMessage.vue';
   import SystemMessage from '../components/SystemMessage.vue';
+  
   import { ref } from 'vue';
   import { nextTick } from 'vue';
   
