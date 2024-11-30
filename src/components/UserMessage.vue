@@ -1,10 +1,10 @@
 <template>
-    <div class = "h-auto w-full flex justify-end flex-row">
-      <div class="h-auto w-fit bg-gray-400 rounded-lg p-[2%] max-w-[80%]">
-        <p class="message-text mx-[5%] text-gray-900">{{ text }}</p>
-      </div>
+  <div class = "h-auto w-full flex justify-end flex-row">
+    <div class="h-auto w-fit bg-gray-400 rounded-lg p-[2%] max-w-[90%]">
+      <p class="message-text mx-[5%] text-gray-900">{{ text }}</p>
     </div>
-  </template>
+  </div>
+</template>
   
   <script setup>
   defineProps({

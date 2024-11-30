@@ -1,6 +1,6 @@
 <template>
   <div class = "h-auto w-full flex justify-start flex-row">
-    <div class="h-auto w-fit bg-gray-700 rounded-lg p-[2%] max-w-[80%]">
+    <div class="h-auto w-fit bg-gray-700 rounded-lg p-[2%] max-w-[90%]">
       <p class="message-text mx-[5%]">{{ text }}</p>
     </div>
   </div>
@@ -21,6 +21,6 @@
     margin: 0; 
     word-wrap: break-word; 
     overflow-wrap: break-word; 
-    white-space: normal; 
+    white-space: pre-wrap; 
     }
 </style>
