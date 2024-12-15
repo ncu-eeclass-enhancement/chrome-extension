@@ -1,7 +1,7 @@
 <template>
     <div class="h-[100%] w-[100%] flex flex-col">
       <!-- Message List -->
-      <div id="messageList" class="w-full h-[80%] flex flex-col overflow-auto p-4">
+      <div id="messageList" class="w-full h-[90%] flex flex-col overflow-auto p-4">
         <div v-for="(message, index) in messages" :key="index" class="flex flex-col mb-2">
             <UserMessage v-if="message.sender === 'user'" :text="message.text" />
             <SystemMessage v-else :text="message.text" />
@@ -14,16 +14,16 @@
       </div>
   
       <!-- Input Box -->
-      <div class="w-full h-[20%] flex justify-center items-center border rounded-lg bg-gray-700">
+      <div class="w-full h-[10%] flex justify-center items-center border rounded-lg bg-purple-700">
         <textarea
           v-model="userMessage"
           type="text"
-          class="w-full h-[100%] px-4 py-2 bg-gray-700 rounded-tl-lg rounded-bl-lg"
+          class="w-full h-[100%] px-4 py-2 bg-purple-900 rounded-tl-lg rounded-bl-lg"
           placeholder="想問什麼呢?"
         ></textarea>
         <button
           @click="sendMessage"
-          class="h-full px-4 py-2 bg-gray-500 text-white font-bold hover:bg-gray-600 rounded-tr-lg rounded-br-lg"
+          class="h-full px-4 py-2 bg-purple-500 text-white font-bold hover:bg-purple-600 rounded-tr-lg rounded-br-lg"
         >
           <!-- Send Icon -->
           <font-awesome-icon :icon="['fas', 'paper-plane']"/>
