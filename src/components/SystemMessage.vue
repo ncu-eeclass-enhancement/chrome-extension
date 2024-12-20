@@ -1,6 +1,6 @@
 <template>
   <div class = "h-auto w-full flex justify-start flex-row">
-    <div class="h-auto w-fit bg-gray-700 rounded-lg p-[2%] max-w-[90%]">
+    <div class="h-auto w-fit bg-purple-950 rounded-lg p-[2%] max-w-[90%] rounded-tl-none">
       <p class="message-text mx-[5%]">{{ text }}</p>
     </div>
   </div>

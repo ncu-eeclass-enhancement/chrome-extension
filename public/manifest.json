@@ -18,5 +18,11 @@
       "*://*.ncueeclass.ncu.edu.tw/",
       "http://*/*",
       "https://*/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://ncueeclass.ncu.edu.tw/course/*", "http://ncueeclass.ncu.edu.tw/course/*"],
+        "js": ["content.js"]
+      }
     ]
   }
